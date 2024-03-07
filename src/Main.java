@@ -172,7 +172,6 @@ public static void main(String[] args) {
 
     System.out.println("seu nome é " +nome+" " +nomeDoMeio+" " +sobreNome); // ou poderia fazer isso: 𝑆𝑦𝑠𝑡𝑒𝑚. 𝑜𝑢𝑡. 𝑝𝑟𝑖𝑛𝑡(𝑝); 𝑆𝑦𝑠𝑡𝑒𝑚. 𝑜𝑢𝑡. 𝑝𝑟𝑖𝑛𝑡(𝑠); 𝑆𝑦𝑠𝑡𝑒𝑚. 𝑜𝑢𝑡. 𝑝𝑟𝑖𝑛𝑡(𝑡);
 
-    char f
 
 }
 }
