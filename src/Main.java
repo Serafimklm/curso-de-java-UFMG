@@ -446,14 +446,10 @@ public class Main {
             } else {
                 System.out.println("idade permitida, entrada liberada");;
                 break;
-
-
             }
         }while (true) ;
-
     }
 }*/
-
 //========================================estrutura de repeticao if====================================================
 /*public class Main {
     public static void main (String[] args){
@@ -498,3 +494,380 @@ public class Main {
     }
 }
 */
+//2) Faça um programa em Java para ler dois números inteiros e testar se o primeiro número
+//é o maior. Se sim o programa deve exibir a mensagem “O primeiro é maior”.
+//========================================================================================
+/*public class Main{
+    public static void main(String[] args) {
+    Scanner scanner =new Scanner(System.in);
+        System.out.println("digite o numero 1");
+        int n1 = scanner.nextInt();
+        System.out.println("digite o numero 2");
+        int n2 = scanner.nextInt();
+        String reultado = ( n1 > n2)? "o primeiro numero digitado é maior que o segundo" : "o primeniro numero digitado nao é maior que o segundo.";
+        System.out.println(reultado);
+    }
+}*/
+//==============================calculo delta======================================
+import java.util.Scanner;
+/* public class Main{
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o coeficiente a: ");
+        double a = scanner.nextDouble();
+        System.out.print("Digite o coeficiente b: ");
+        double b = scanner.nextDouble();
+        System.out.print("Digite o coeficiente c: ");
+        double c = scanner.nextDouble();
+
+        double delta = b * b - 4 * a * c;
+
+        if (delta < 0) {
+            System.out.println("Não existem raízes reais");
+        } else {
+            System.out.println("Delta: " + delta);
+        }
+    }
+}
+ */
+//=================================operador ternario======================================================
+//1) Faça um programa para ler 2 números inteiros do usuário. O programa deve calcular e
+//exibir a mensagem “números iguais”, se os números digitados são iguais, ou “números
+//diferentes”, caso contrário
+/*public class Main{
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("digite o numero 1 ");
+        int numero = scanner.nextInt();
+        System.out.println("digite o numero 2 ");
+        int numero2 = scanner.nextInt();
+
+        String comparacao = (numero2 == numero) ? "os numeros sáo iguais" : "os numeros sáo diferentes";
+        System.out.println(comparacao);
+    }
+}*/
+//==============================if else ou operador ternario===================================================
+//2) Faça um programa para ler 2 números inteiros, A e B, do usuário. O programa deve
+//calcular e exibir a mensagem “A é divisível por B”, se o resto da divisão inteira de A por
+//B for igual a zero. Caso contrário o programa deve exibir a mensagem: “A não é múltiplo
+//de B”.
+/*public class Main {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("digite o numero 1");
+        int n1 = scanner.nextInt();
+        System.out.println("digite o numero 2");
+        int n2 = scanner.nextInt();
+        int comparacao = (n1 % n2);
+        if (comparacao == 0){
+            System.out.println("o primeiro numero digitado é divisivel pelo segundo");
+        } else if (comparacao!= 0) {
+            System.out.println("o primeiro numero digitado náo e divisivel pelo segundo");
+
+        }
+    }
+}*/
+//========================================calculo  IMC==============================================================
+/*public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("=======PROGRAMA CALCULO IMC=========");
+        System.out.println("DIGITE A SUA ALTURA: ");
+        double altura = scanner.nextDouble();
+
+        System.out.println("Digite o seu peso: ");
+        double peso = scanner.nextDouble();
+
+        double IMC = peso / (altura * altura);
+//  isso é o mesmo que double IMC = peso/Math.pow(altura, 2);
+
+        if (IMC < 17) {
+            System.out.println("vocë esta muito abaixo do peso");
+
+        }
+        else if (IMC > 18.4 && IMC < 24.99) {
+            System.out.println("seu peso esta  normal " +IMC);
+
+        }
+        else if (IMC >= 25 && IMC <= 29.99) {
+            System.out.println("voce esta acima do peso " +IMC );
+
+        }
+        else if (IMC >= 30 && IMC <= 34.99) {
+            System.out.println("obesidade nível 1 " +IMC );
+
+        }
+        else if (IMC >= 35 && IMC <= 39.99) {
+            System.out.println("obesidade severa " +IMC);
+
+        } else{
+            System.out.println("seu quadro é de obesidade morbida " +IMC);
+
+        }
+    }
+}*/
+//=========================================algoritmo COM SWITCH==============================================================
+/*public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Scanner scannerString = new Scanner(System.in);  // escaner especifico para introduzir um prato por meio de digitacao
+        int codigo;
+        System.out.println("Sabores de pizza");
+        System.out.println  ("1 - pizza de carne\n"
+                            +"2- pizza fracasse\n"
+                            +"3 - pizza atum \n"
+                            +"4 - monte seu prato: "
+                            +"de o codigo da refeicao");
+        codigo = scanner.nextInt();
+        switch (codigo){
+            case 1:
+                System.out.println("a pizza g, custa 29, a GG custa 34"
+                +"com adcional de borda, +4 reais, independentemente do tamanho");
+                break;
+
+            case 2:
+                System.out.println("a pizza de fricasse custa 30 reias no tamanho G, no tamanho GG custa 35"
+                +"borda custa + reais na de fricasse (independetemente do tamanho)");
+
+            case 3:
+                System.out.println("a pizza de atum custa 33  reais no tamanho g, no tamanho GG custa 36"
+                +"borda custa + 6 reais");
+                break;
+            case 4:
+                System.out.println("monte seu prato " );
+                String  prato = scannerString.nextLine(); // tem um  scanner especifico para ler
+                System.out.println( prato );
+                break;
+
+            default:
+                System.out.println("o codigo digitado e invalido ");
+        }
+    }
+}
+*/
+/*public class Main {
+    public static void main (String[] args){
+//        1) Faça um programa que leia 2 números reais e um número inteiro representando uma
+//das opções abaixo. De acordo com a opção, execute as operações especificadas:
+//1 - Média aritmética dos números: (𝑛1 + 𝑛2)/2
+//2 - Média geométrica dos números: √𝑛1 ∗ 𝑛2
+//3 - Diferença do maior pelo menor (descubra o maior e calcule a diferença)
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("DIGITE O PRIMEIRO NÚMERO REAL: ");
+        double r1 = scanner.nextDouble();
+        System.out.println(" DIGITE O SEGUNDO NÚMERO REAL: ");
+        double r2 = scanner.nextDouble();
+        System.out.println(" DIGITE  UM NÚMERO INTEIRO: ");
+        int inteiro1 = scanner.nextInt();
+
+        double mediaAritimetica = (r1 + r2) / 2;
+       double mediaGeometrica = Math.sqrt(r1 * r2);
+
+        System.out.println("a media aritimetica dos dois numero e " + mediaAritimetica);
+        System.out.println("a media geometrica 'e " +mediaGeometrica);
+        if (r1 > r2 ) {
+            System.out.println("o numero maior 'e o primeiro digitgado ");
+            double maior1 = r1 - r2;
+            System.out.println("a diferenca entre eles e: " +maior1);
+        }else {
+            System.out.println("o numero maior 'e o segundo digitado: ");
+            double maior = r2 - r1;
+            System.out.println("a diferenca entre eles e " +maior);
+        }
+        if (r2 != 0) {
+            double divisao = r1/r2;
+            System.out.println("a divisão do segundo pelo primeiro e " +divisao);
+        }
+        double resultado = Math.pow(r1, r2);
+        System.out.println("o primeiro numero elevado ao segundo e igual a " + resultado);
+
+    }
+}
+*/
+//=============================================================================================================-========
+//2) Faça um programa que receba o salário de um funcionário e usando a tabela a seguir
+//calcule e mostre o novo salário, após aplicado o reajuste correto para a faixa:
+/*public class Main {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("ENTRE COM O SALARIO DO FUNCIONARIO ");
+        double salario = scanner.nextDouble();
+        if (salario < 500) {
+            salario = (salario * 30) / 100;
+            System.out.println("o reajuste salarial sera de 30%, o que equivale a " +salario+"BRL");
+        } else if (salario >= 500 && salario <= 700) {
+            salario = (salario * 25) / 100;
+            System.out.println("o reajuste salarial sera de 25%, o que equivale a  " +salario+"BRL");
+        } else if (salario > 700 && salario < 900) {
+            salario = (salario * 20) / 15;
+            System.out.println("o reajuste salarial sera de 20%, o que equivale a  " +salario+"BRL");
+        } else if (salario >= 900 && salario <=1200) {
+            salario = (salario * 15) / 100;
+            System.out.println("o reajuste salarial sera de 15%, o que equivale a  " + salario + "BRL");
+        }else {
+            salario = (salario * 10) / 100;
+            System.out.println("o reajuste salarial sera de 10%, o que equivale a  " + salario + "BRL");
+        }
+    }
+}*/
+/*
+public class Main {
+    public static final int nota_100 = 100;
+    public static final int nota_50 = 50;
+    public static final int nota_20 = 20;
+    public static final int nota_10 = 10;
+    public static final int nota_5 = 5;
+public  static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("DIGITE O VALOR DO SAQUE ");
+            int saque = scanner.nextInt();
+
+    // Calcula a quantidade de notas de 100 necessárias e atualiza o valor de saque
+    int quantidadeNotas100 = saque / nota_100; // Divide o valor do saque pelo valor da nota de 100
+    saque %= nota_100; // Calcula o restante do saque após retirar as notas de 100
+
+    // Calcula a quantidade de notas de 50 necessárias e atualiza o valor de saque
+    int quantidadeNotas50 = saque / nota_50; // Divide o restante do saque pelo valor da nota de 50
+    saque %= nota_50; // Calcula o restante do saque após retirar as notas de 50
+
+    // Calcula a quantidade de notas de 20 necessárias e atualiza o valor de saque
+    int quantidadeNotas20 = saque / nota_20; // Divide o restante do saque pelo valor da nota de 20
+    saque %= nota_20; // Calcula o restante do saque após retirar as notas de 20
+
+    // Calcula a quantidade de notas de 10 necessárias e atualiza o valor de saque
+    int quantidadeNotas10 = saque / nota_10; // Divide o restante do saque pelo valor da nota de 10
+    saque %= nota_10; // Calcula o restante do saque após retirar as notas de 10
+
+    // Calcula a quantidade de notas de 5 necessárias e atualiza o valor de saque
+    int quantidadeNotas5 = saque / nota_5; // Divide o restante do saque pelo valor da nota de 5
+    saque %= nota_5; // Calcula o restante do saque após retirar as notas de 5
+
+    System.out.println("Número de notas de 100: " + quantidadeNotas100);
+    System.out.println("Número de notas de 50 : " + quantidadeNotas50);
+    System.out.println("Número de notas de 20 : " + quantidadeNotas20);
+    System.out.println("Número de notas de 10 : " + quantidadeNotas10);
+    System.out.println("Número de notas de 5  : " + quantidadeNotas5);
+
+}
+    }
+    */
+///=-===============================================ordenamento de números-----=========================================
+/* public class Main {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int aux = 0;
+        System.out.println("entre com o primeiro numero");
+        int primeiro = scanner.nextInt();
+        System.out.println("entre com o segundo numero");
+        int segundo =  scanner.nextInt();
+        System.out.println("entre com o terceiro numero");
+        int terceiro = scanner.nextInt();
+
+        if(primeiro>terceiro){   // Se o primeiro número for maior que o terceiro,
+            aux = primeiro;      // armazene o valor do primeiro número na variável auxiliar.
+            primeiro = terceiro; // Atribua o valor do terceiro número ao primeiro.
+            terceiro = aux;      // Atribua o valor armazenado na variável auxiliar ao terceiro número.
+        }
+        if (primeiro>segundo){  // Se o primeiro número for maior que o segundo,
+            aux = primeiro;     // armazene o valor do primeiro número na variável auxiliar.
+            primeiro = segundo; // Atribua o valor do segundo número ao primeiro.
+            segundo = aux;      // Atribua o valor armazenado na variável auxiliar ao segundo número.
+        }
+        if (segundo>terceiro) {  // Se o segundo número for maior que o terceiro,
+            aux = segundo;       // armazene o valor do segundo número na variável auxiliar.
+            segundo = terceiro;  // Atribua o valor do terceiro número ao segundo.
+            terceiro = aux;      // Atribua o valor armazenado na variável auxiliar ao terceiro número.
+
+
+        }
+        System.out.println("menor valor " +primeiro+ "\nsegundo menor:" +segundo+"\nmaior valor" +terceiro+ ".");
+    }
+}*/
+//============================================ESTRUTURA SWITCH CASE E DO WHILE==========================================
+/*public class Main {
+    public static void main (String[] args){
+        double resultado =0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("===========cauculadora============");
+        System.out.println("enter with the first nunber:");
+        double valor1 = scanner.nextDouble();
+        char operadorAritimetico;
+//      ESTRUTURA DE REPETICAO ENQUANT0
+        do {
+            System.out.println("enter with tipe of operation ");
+            operadorAritimetico = scanner.next().charAt(0);
+        }while (operadorAritimetico != '+' && operadorAritimetico != '-'
+                && operadorAritimetico != '/' && operadorAritimetico != '*');
+//            ESTRUTURA DE REPETICAO ENQUANTO WHILE
+        System.out.println("enter with the second value: ");
+        double valor2 = scanner.nextDouble();
+
+        switch (operadorAritimetico) {
+            case '+':
+                 resultado = valor1 + valor2;
+                System.out.println(resultado);
+                break;
+            case  '-':
+                resultado = valor1 - valor2;
+                System.out.println(resultado);
+                break;
+            case  '/':
+                resultado = valor1 / valor2;
+                System.out.println(resultado);
+                break;
+            case  '*':
+                resultado = valor1 / valor2;
+                System.out.println(resultado);
+            default:
+
+        }
+    }
+}*/
+//==================================================do while e while====================================================================
+/*public class Main {
+    public static void main(String[]args){
+        Scanner scanner = new Scanner(System.in);
+         int vireDireita = 0;
+        do {  vireDireita ++;
+            System.out.println("vire a direita");
+        }while (vireDireita <5);
+
+        System.out.println("===========================================");
+        System.out.println("Agora While\n");
+
+                vireDireita = 0;
+                while (vireDireita < 5) {
+                    System.out.println("vire a direita");
+                    vireDireita++;
+                }
+            }
+        }*/
+//=========================cauculo raizes equação de segundo grau====calcular raizes reais==============================
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double a, b, c, delta, x1, x2;
+            System.out.println("de o valor de a ou zero para finalizar; ");
+            a = scanner.nextDouble();
+            if (a != 0) {
+                System.out.println("de o valor  de b:");
+                b = scanner.nextDouble();
+                System.out.println("de o valor de c ");
+                c = scanner.nextDouble();
+                delta = b * b - 4 * a * c;
+                if (delta < 0) {
+                    System.out.println("nao exitem raizes reais");
+                } else if (delta == 0) {
+                    x1 = -b / (2 * a);
+                    System.out.println("raiz:  x1");
+                } else {
+                    x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    System.out.println("x1" + x1 + "\nx2" + x2);
+                }
+            }
+        }
+    }
