@@ -1,3 +1,4 @@
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Scanner;
 
 //==============================incremento e decremento pre e pos FIXado==============================================
@@ -846,7 +847,7 @@ public  static void main(String[] args) {
             }
         }*/
 //=========================cauculo raizes equação de segundo grau====calcular raizes reais==============================
-public class Main {
+/*public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double a, b, c, delta, x1, x2;
@@ -870,4 +871,310 @@ public class Main {
                 }
             }
         }
+    }*/
+//=====================================estrutrua de repetiçao while, media aluno----------------------------------------
+/*public class Main {
+    public void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        double nota, soma = 0, media;
+        int conta = 1;
+        while (conta <= 7){
+            System.out.println("dë a nota " +conta);
+            nota = scanner.nextDouble();
+            soma = soma + nota;
+            conta++;
+        }
+        media = soma/7;
+        System.out.println("a nota media é " +media);
     }
+}*/
+//======================== O mesmo feito acima, mas com estrutura de repeticao Do while==================================
+/*public class Main {
+    public void main (String[] args){
+    double  nota, soma=0, media;
+    Scanner scanner = new Scanner(System.in);
+    int conta = 1;
+
+    do{
+        System.out.println("de a nota " +conta);
+        nota = scanner.nextDouble();
+        soma = nota + soma;
+
+    }while (conta < 7);
+    media = soma / 7;
+        System.out.println("nota media " + media);
+    }
+}*/
+//==========================estrutura de repetição for==================================================================
+/*public class Main {
+    public void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        double nota, soma=0, media;
+        for (int conta = 0; conta <7; conta++){
+            System.out.println("de a nota " +conta);
+            nota = scanner.nextDouble();
+            soma = soma + nota;
+        }
+        media = soma / 7;
+        System.out.println("a nota media foi " + media);
+    }
+}*/
+//======================================================================================================================
+/*public class Main {
+    public void main(String[] args){
+        int i = 1;
+        while (i <= 10){
+            System.out.println(i);
+            i++;
+        }
+        System.out.println("=============================");
+        i = 0;
+        for (i = 1; i <= 10; i++){
+            System.out.println("o valor de i é " +i);
+        }
+        System.out.println("===============================");
+        i = 1;
+        do{
+            System.out.println(i);
+            i++;
+        }while(i <= 10);
+
+        System.out.println("=-============par ou impar=================");
+        i = 0;
+        for  (i = 2; i <= 20; i+=2){
+            System.out.println(i);
+        }
+
+    }
+}*/
+////====================================================while==================================================================
+/*public class Main {
+    public void main(String[] args){
+        int a = 1, b = 0, c = 0;
+        while (a < 10){
+            if (b < 4 ){
+                a = a * 2;
+            }else{
+                a = a + 3;
+            }
+            if (c != 3) {
+                b = b + 3;
+            }else{
+                b = b - 2;
+            }
+            c++;
+        }
+        System.out.println("a = " +a);
+        System.out.println("b =" + b);
+        System.out.println("c = " + c);
+    }
+}*/
+//======================================================================================================================
+/*public class Main {
+    public void main (String[] args){
+        Scanner scanner = new Scanner(System.in );
+        double valor, maior=0;
+
+        for   (int i= 0; i < 5; i++){
+            System.out.println("de o valor ");
+            valor = scanner.nextDouble();
+            if (i == 0)
+            maior = valor;
+
+
+            if (maior < valor ){
+                maior = valor;
+            }
+
+        }
+        System.out.println("maior valor " +maior);
+    }
+}*/
+// ========================================calcular menor valor e maior valor=========================================================
+/*public class Main {
+    public void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double valor = 0, maiorValor = 0, menorValor = 0, contador = 0;
+
+        for (contador = 0; contador < 9; contador++) {
+            System.out.println("de o valor: ");
+            valor = scanner.nextDouble();
+            if (contador == 0) {
+                maiorValor = valor;
+                menorValor = valor;
+
+            }else{
+                if (valor > maiorValor) {
+                    maiorValor = valor;
+                }
+                if (valor < menorValor) {
+                    menorValor = valor;
+                }
+
+            }
+
+        }
+                System.out.println("o menor valor 'e " + menorValor + "maior valor  " + maiorValor);
+    }
+}
+*/
+//==============================================cauculo valor de 2, elevado ao quadrado adcionado i-------------------
+/*public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite um número inteiro n: ");
+        int n = scanner.nextInt();
+
+        // Inicializa a variável soma com 0
+        double soma = 0;
+
+        // Loop que vai de 0 até n (inclusive)
+        for (int i = 0; i <= n; i++) {
+            // Em cada iteração do loop, adiciona 2 elevado à potência i à soma
+            soma += Math.pow(2, i);
+        }
+
+        // Imprime a soma calculada
+        System.out.println("O valor do somatório é: " + soma);
+    }
+}*/
+//==========================================DO WHILE ELSE IF============================================================================
+//Considere as seguintes faixas etárias: criança (de 0 a 10 anos), adolescente (de 11 a 16
+//anos), Jovem (de 17 a 26 anos), adulto (de 27 a 59 anos) e idoso (acima de 60 anos).
+//Faça um programa que leia a idade de 20 pessoas e mostre para cada uma qual a faixa
+//etária que pertence
+/*public class Main {
+    public void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int pessoa = 1;
+        do {
+            System.out.println("digite a idade da pessoa ");
+            int idade = scanner.nextInt();
+            if (idade < 16 && idade > 0) {
+                System.out.println("criança[adolecente\n");
+            }
+            else if (idade > 16 && idade <= 27){
+                System.out.println("jovem\n");
+
+            } else if (idade >= 26 && idade < 60) {
+                System.out.println("adulto\n");
+            }else{
+                System.out.println("idoso\n");
+            }
+            pessoa++;
+            System.out.println("pessoa numero " + pessoa);
+        }while (pessoa <= 20);
+    }
+}
+ */
+
+//===========================================WHILE DO WHILE===========================================================================
+// Faça um programa que leia uma quantidade indeterminada de valores inteiros do usuário.
+//O programa deve exibir quantos são maiores que 82, quantos números são menores que
+//18 e quantos números informados estão no intervalo [18, 82]. while, do..while e
+////for
+/*public class Main {
+    public void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int valor = 1, maiorQue82 = 0, menorQue18 = 0, noIntervalo = 0;
+        System.out.println("======================solucao while===========================");
+        while (true) {  // TRUE e o mesmo que 1, ou seja, diferente de zero;
+            System.out.println("Digite os valores inteiros (digite 0 para encerrar):");
+            valor = scanner.nextInt();
+            if (valor == 0) break; // se o numero digita for igual a zero aqui mesmo ele encerra o laco e  do DO.
+
+            if (valor > 82) {
+                maiorQue82++;
+            } else if (valor < 18) menorQue18++;
+            else noIntervalo++;
+
+        }
+        System.out.println("Quantidade de números maiores que 82: " + maiorQue82);
+        System.out.println("Quantidade de números menores que 18: " + menorQue18);
+        System.out.println("Quantidade de números no intervalo [18, 82]: " + noIntervalo+ "\n");
+
+
+        System.out.println("=========================SOLUÇÃO DO WILE===================================");
+        double dovalor = 1, numeromaiorQue82 = 0, numeromenorQue18 = 0, numeroIntervalo = 0;
+        System.out.println("Digite os valores inteiros (digite 0 para encerrar):");
+        do {
+            valor = scanner.nextInt();
+            if (valor == 0) break;
+            if (valor > 82) maiorQue82++;
+            else if (valor < 18) menorQue18++;
+            else noIntervalo++;
+        } while (true);
+
+        System.out.println("Quantidade de números maiores que 82: " + maiorQue82);
+        System.out.println("Quantidade de números menores que 18: " + menorQue18);
+        System.out.println("Quantidade de números no intervalo [18, 82]: " + noIntervalo);
+    }
+}*/
+/*public class Main {
+    public void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        double valor = 0;
+        byte continuar = 0;
+        while (continuar != 1 ){
+        System.out.println("DIGITE O VALOR DO PRODUTO");
+        valor += scanner.nextInt();
+            System.out.println("o valor atual da soma é " +valor);
+            System.out.println("Deseja continuar? digite 0 para continuar, 1 para parar\n");
+            continuar = scanner.nextByte();
+        }
+        System.out.println("o valor total em compras foi: " +valor+ "\n deseja subtrair algum valor?; ");
+
+
+
+    }
+}*/
+//======================================================================================================================
+//8) Construa um programa que leia a idade e o estado civil (C - casado, S - solteiro, O -
+//outros) para uma pesquisa com um conjunto de pessoas. A quantidade de pessoas é
+//desconhecida pelo pesquisador. Use um laço indeterminado. O programa deve calcular
+//e exibir: a) Quantidade de pessoas solteiras
+//          b) Média da idade das pessoas casadas
+//          c) Qual é a idade da pessoa mais velha.
+
+//======================================================================================================================
+
+/*public class Main {
+    public void main (String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int idade, solteiroIdad = 0, soleteiroSoma = 0, casadoIdade = 0, casadoSoma = 0,
+                divorciadoIdade = 0, divorciadoSoma = 0, viuvoIdade = 0, maiorIdade = 0;
+        char estadoCivil = 'w';
+        byte continuar = 0;
+
+        do {
+            System.out.println("digite seu estado civil ");
+            estadoCivil = scanner.next().charAt(0);
+            switch (estadoCivil) {
+                case 's':
+                    soleteiroSoma++;
+                    break;
+                case 'c':
+                    casadoSoma++;
+                    break;
+                case 'd':
+                    divorciadoSoma++;
+                    break;
+                case 'v':
+                    viuvoIdade++;
+            }
+
+            System.out.println("Digite sua idade ");
+            idade = scanner.nextInt();
+            if (idade > maiorIdade) {
+                maiorIdade = idade;
+            }
+
+            System.out.println("deseja continuar, 1 para sim, 0 para nao ");
+            continuar = scanner.nextByte();
+        }while (continuar != 0) ;
+        System.out.println("a pessoa mais velha tem " + idade);
+        int mediaCasado = idade/casadoSoma;
+        System.out.println("a media de idade das pessoas casadas e de " +mediaCasado);
+        System.out.println("a quantidade de solteiros é " +soleteiroSoma);
+    }
+}*/
