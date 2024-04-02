@@ -1,5 +1,5 @@
 import javax.swing.plaf.synth.SynthOptionPaneUI;
-import java.util.Scanner;
+import java.util.*;
 
 //==============================incremento e decremento pre e pos FIXado==============================================
 /*
@@ -511,6 +511,8 @@ public class Main {
 }*/
 //==============================calculo delta======================================
 import java.util.Scanner;
+
+import static java.lang.System.in;
 /* public class Main{
 
     public static void main(String[] args) {
@@ -1136,8 +1138,6 @@ public  static void main(String[] args) {
 //          b) Média da idade das pessoas casadas
 //          c) Qual é a idade da pessoa mais velha.
 
-//======================================================================================================================
-
 /*public class Main {
     public void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -1178,3 +1178,325 @@ public  static void main(String[] args) {
         System.out.println("a quantidade de solteiros é " +soleteiroSoma);
     }
 }*/
+//-----------------------------------------------Vetores--------------------------------------------------------------------------
+/*public class Main {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        double[] x = new double[3];
+        x [0] = .1;
+        x[1] = 1.5;
+        x[2] = 100.5;
+        double soma = x[0]+x[1]+x[2];
+        System.out.println("soma : " +soma);
+    }
+}*/
+/*public class Main {
+    public static void main (String[] args) {
+        Scanner scanner = new Scanner(in);
+        int [] idade = new int [14];
+
+        for (int i = 0; i < idade.length; i++){ //enquanto ele nao preecher os 13 espacos, idade se repete.
+            System.out.println("de a idade da pessoa");
+//            i sera igual a zero, depois 1,2,ate 13(idade.lenght-1)
+                idade[i] = scanner.nextInt();
+
+        }
+    }
+}*/
+//========================================vetores descobrir maior e menor mumero========================================
+/* public class Main {
+    public static void main (String[] args) {
+        Scanner scanner = new Scanner(in);
+         int idade[] = new int[14];
+         int maiorIdade = 0, menorIdade = 1;
+         double soma = 0, media, acimaDaMedia;
+         for (int i = 0; i < idade.length; i++){
+             System.out.println("de a idada da pesosa");
+             idade [i] = scanner.nextInt();
+             soma += idade[i];
+             if (i == 0) {
+                 maiorIdade = idade[i];
+                 menorIdade = idade[i];
+             } else if (idade[i] < menorIdade) {
+                    menorIdade = idade[i];
+                 if (idade[i] > maiorIdade) {
+                     maiorIdade = idade[i];
+                 }
+             }
+         }
+        System.out.println("menor idade " +menorIdade);
+        System.out.println("maior idade " +maiorIdade);
+
+         media = soma/idade.length; //soma e double portanto a divisão exata
+        System.out.println("idade media" +media);
+
+        //calculo da quantidade de pessoas aicma da media
+        acimaDaMedia = 0;
+        for (int i = 0; i < idade.length; i++){
+            if (idade[i] >= media){
+                acimaDaMedia++;
+            }
+        }
+        System.out.println("ha " +acimaDaMedia+ "pessoas com " +"idade acima da media(" +media+ ")");
+    }
+}*/
+//-===============================-------vetores menor e maior numero-----------------------==========================
+/*public class Main {
+    public void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
+        float soma = 0;
+        float maiorTemperatura = 0, menorTemperatura = 0;
+        float temp[] = new float[7]; // temp.length é igual a 7.
+        for (int i = 0; i <temp.length; i++){  //temp.lenght é o mesmo que o valor float temp[] = new float[7];
+            System.out.println("temperatura do dia" +(i+1)+")" );
+            temp[i] = scanner.nextFloat();
+            soma = soma + temp[i]; //soma de cada temperatura.
+
+            if (i == 0) {  //como o i vai ser zero uma unica vez ele ira iniciar a maior e menor temperatura com o valor digitado
+                maiorTemperatura = temp[i]; //valor digitado 2, maior temperatura = 2
+                menorTemperatura = temp[i]; // valor digitado 2, menor temperatura = 2
+
+            } else if (temp[i] < menorTemperatura) { // se o valor do primeiro  temp[i] digitado for maior, ex: 4, ele desconsidera esse else e vai para o proximo if
+                menorTemperatura = temp[i];
+
+            }if (temp[i] > maiorTemperatura) {  // se o valor digitado do primeiro temp[i] digitado for maior que o autal ex: 4, ele coloca o numero 4 na variavel maior temperautra;
+                    maiorTemperatura = temp[i];
+            }
+
+        }
+        float media  = soma/ temp.length;  //ou media = soma / 7 o que da no mesmo resultado, visto que temp.lenght e o mesmo que 7 valores.
+        for (int i = 0; i < temp.length; i++) {
+            if (temp[i] > media) {
+                System.out.println("temperaturas acima da media " +temp[i]+ "\n");
+            }
+        }
+            System.out.println("media de temperatura = " + media + "\n");
+            System.out.println("a maior temperatura registrada foi " + maiorTemperatura + "\n a menor temperatura registrada foi " + menorTemperatura);
+
+    }
+}*/
+//=====================================================vetrores=================================================================
+/*public class Main {
+    public void main (String [] args){
+        Scanner scanner = new Scanner(System.in);
+        int tam;
+        System.out.println("insira o tamanho dos tres vetores a seguir: " );
+        tam = scanner.nextInt();
+
+        int a[] = new int[tam], b[] = new int[tam], c[] = new int [tam];
+
+//        leitura dos elementos de a e b;
+        for (int i=0; i < a.length; i++){
+            System.out.println("A ["+i+"]");
+            a[i] = scanner.nextInt();
+            System.out.println("b ["+i+"]");
+            b[i] = scanner.nextInt();
+//            vetor produto
+            c[i] = a[i] * b[i];
+        }
+        for (int i = 0; i < a.length; i++){
+            System.out.println(a[i] +"*"+b[i]+"="+c[i]);
+        }
+    }
+}*/
+//========================vetores, lista de convidados, INTRODUZIR NOMES E PESQUISAR PESSOAS----------------------------------------
+/*public class Main {
+    public void main(String [] args){
+
+        // Cria dois objetos Scanner para ler diferentes tipos de dados
+        // scanner para números inteiros
+        Scanner scanner = new Scanner(System.in); // para numeros inteiros
+        Scanner scanner1 = new Scanner(System.in);
+
+        // Declara a variável tam para armazenar o número de convidados
+        int tam;
+
+        // Lê o número de convidados da entrada padrão
+        System.out.println("informe o numero de convidados da festa");
+        tam = scanner.nextInt();
+
+        // Cria um vetor de strings para armazenar os nomes dos convidados, que sera introduzido no scanner acima
+        String convidado[] = new String[tam];
+//      A PARTIR DAQUI TEREMOS A LEITURA DOS NOMES QUE IRÁO SER ATRIBUIDOS AO NUMERO DE POSIÇÕES QUE HAVERA NA STRING
+        for (int i = 0; i< convidado.length; i++) {  ///convidado.length É O NUMERO DE POSIÇÕES INSERIDA NO PRIMERO SCANNER
+            System.out.println("de o nome completo do convidado ");
+            convidado[i] = scanner1.nextLine(); //ENQUANTO NAO CHEGARMOS AO NUMERO DIGITADO NO ARRAY ELE CONTINUA A REPETIR.
+        }
+        System.out.println("informe o nome para pesquisa: ");
+        String nome = scanner1.nextLine();
+        boolean achou = false; // achou sera true se o nome estiver no vetor,
+        //pesquisa por um nome no vetor;
+        for(int i = 0; i < convidado.length; i++){ // Loop para percorrer cada nome no array
+            // Compara o nome digitado com o nome na posição i do vetor
+            // ignorando a diferença entre maiúsculas e minúsculas
+
+            if (convidado[i].equalsIgnoreCase(nome)){ // Verifica se o nome na posição 'i' do array é igual ao nome pesquisado (desconsiderando maiúsculas/minúsculas)
+                achou = true;
+                break; // interrompe o laco de repeticao
+            }
+        }
+        // exibe o resultado da busca;
+        if (achou) {
+            System.out.println(nome+ " foi convidado");
+        }else
+            System.out.println(nome+ " náo foi convidado, nome náo localizdo");
+        scanner.close(); scanner1.close();//essa parte nao e obirgatoria mas e importante para fechar os streams de entrada.
+    }
+}
+
+ */
+//--------------------------------------vetores, exibir numeros por odem de digitação--------------------------------------------------------------
+/*
+import java.util.Collections;
+public class Main {
+    public void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int numeros[] = new int[10];
+        int i;
+        for ( i = 0; i < numeros.length; i++) {
+            System.out.println("digite o numero" + (i + 1) + ")");
+            numeros[i] = scanner.nextInt();
+
+            }
+        // Ordenando os números em ordem decrescente
+        System.out.println("Os números em ordem decrescente são:");
+//
+        Collections.reverse(Arrays.asList(numeros));
+
+        // Imprimir o array invertido
+        System.out.println("Os números em ordem inversa são:");
+        for (int numero : numeros) {
+            System.out.println(numero);
+        }
+
+    }
+}*/
+//========================arrays vetores, maior para o menor do vetor===================================================
+import java.util.Scanner;
+import java.util.Arrays;
+
+// Importação da classe Scanner para receber entrada de dados do usuário
+import java.util.Scanner;
+
+// Declaração da classe Main
+/*public class Main {
+    // Método principal que inicia a execução do programa
+    public static void main(String[] args) {
+        // Criação de um objeto Scanner para ler entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Declaração de um array de inteiros com tamanho 10
+        int numeros[] = new int[10];
+        int i; // Declaração de uma variável de controle para os loops
+
+        // Loop para preencher o array com números fornecidos pelo usuário, que vai de zero at[e o numero definido pelo user
+        for (i = 0; i < numeros.length; i++) {
+            // Solicitação para o usuário digitar um número e armazena no array
+            System.out.println("Digite o número " + (i + 1) + ")");
+            numeros[i] = scanner.nextInt();
+        }
+
+        // Impressão de uma mensagem indicando o início da impressão dos números em ordem inversa
+        System.out.println("Os números em ordem inversa são:");
+
+//         Loop para imprimir os números do array na ordem inversa
+//        Essa linha itera o array "numeros" do final ao início.
+//        A variável "i" é inicializada com o valor do tamanho do array "numeros" menos 1.
+//        A cada iteração, o valor de "i" é decrementado em 1.
+//        O loop termina quando "i" for menor que 0.
+        for (i = numeros.length - 1; i >= 0; i--) {
+            // Imprime o número atual do array
+            System.out.println(numeros[i]);
+        }
+    }
+}*/
+//==============================================vetores=================================================================
+//Dado um vetor de inteiros de x posições informadas pelo usuário, calcule e exiba a soma
+//dos elementos do vetor.
+/*public class Main {
+    public void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        Scanner scanner1 = new Scanner(System.in);
+        int tam; int soma = 0;
+        System.out.println("digite a quantidade de produtos total ");
+        tam = scanner.nextInt();
+
+        int produtos[] = new int[tam];
+
+        for (int i = 0; i < produtos.length; i++) {
+            System.out.println("Dgite o valor do produto "+i+".\n"); // aqui se refere a posição atual do array.
+            int mercadoria = scanner1.nextInt();
+            soma += mercadoria;
+            System.out.println("o valor do produto é " +mercadoria);
+        }
+        System.out.println("O VALOR TOTAL EM PRODUTOS É " +soma);
+
+        }
+    }*/
+//----------------------------------------------------------------------------------------------------------------------
+//Um técnico deseja convocar um time jogadores anotando os nomes dos 11 titulares e
+//dos 11 reservas para um torneio regional. Seu programa deve armazenar os nomes em
+//dois vetores distintos: um para titulares e outro para reservas. Em seguida o programa
+//deve obter um nome de jogador para uma pesquisa em ambos os vetores. O técnico
+//deseja saber se o nome informado é titular, reserva ou não foi convocado. Faça
+//comparação ignorando maiúsculas e minúsculas.
+public class Main {
+    public void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Scanner scanner1 = new Scanner(System.in);
+        String[] nomeTitular = new String[2];
+        String[] nomereserva = new String[3];
+
+        System.out.println("digite o nome dos jogadores ");
+        for (int i = 0; i < nomeTitular.length; i++) {
+            System.out.println("de o nome do jogador " + i + " titular\n");
+            nomeTitular[i] = scanner1.nextLine();
+        }
+
+        System.out.println("Digite os nomes dos jogadores reservas: ");
+        for (int i = 0; i < nomereserva.length; i++) {
+            System.out.println("Digite o nome do jogador reserva " + i + ": ");
+            nomereserva[i] = scanner.nextLine();
+        }
+
+        boolean achou = false;
+        while (!achou) {
+        System.out.println("pesquise o nome do jogador: ");
+        String nome = scanner1.nextLine();  // a variavel do tipo String nome sera usada para pequisa de nome de jogador.
+//            verificacao de titulares
+            for (int i = 0; i < nomeTitular.length; i++) {
+                if (nomeTitular[i].equalsIgnoreCase(nome)) {
+                    achou = true;
+                    System.out.println(nome + " é titular.");
+                    break;
+                }
+            }
+            // Verificação entre os reservas
+            if (!achou) {
+                for (int i = 0; i < nomereserva.length; i++) {
+                    if (nomereserva[i].equalsIgnoreCase(nome)) {
+                        achou = true;
+                        System.out.println(nome + " é reserva.");
+                        break;
+                    }
+                }
+            }
+            // Mensagem caso o jogador não seja encontrado
+            if (!achou) {
+                System.out.println("Jogador não localizado. Deseja continuar pesquisando? (S/N)");
+                String resposta = scanner.nextLine();
+                if (!resposta.equalsIgnoreCase("S"))
+                    break;
+            }
+        }
+    }
+}
+//=====================================================================================================================
+//Leia para um conjunto de alunos seus nomes e suas notas finais. Armazene os valores
+//em dois vetores: uma para nomes e outro para notas. O número de alunos na turma será
+//informado pelo usuário. O programa deve calcular a média das notas e exibir o nome e
+//a nota final dos alunos com notas inferiores à média da turma. Também deve exibir os
+//nomes e notas dos que alcançaram rendimento igual ou acima da média. Por fim, o
+//programa deve informar o nome do aluno que obteve a menor nota da turma e o nome
+//do aluno que obteve a maior nota.
