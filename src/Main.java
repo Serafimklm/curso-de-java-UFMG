@@ -1,6 +1,3 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-import java.util.*;
-
 //==============================incremento e decremento pre e pos FIXado==============================================
 /*
   public class Main {
@@ -512,7 +509,6 @@ public class Main {
 //==============================calculo delta======================================
 import java.util.Scanner;
 
-import static java.lang.System.in;
 /* public class Main{
 
     public static void main(String[] args) {
@@ -1373,11 +1369,9 @@ public class Main {
     }
 }*/
 //========================arrays vetores, maior para o menor do vetor===================================================
-import java.util.Scanner;
-import java.util.Arrays;
 
 // Importação da classe Scanner para receber entrada de dados do usuário
-import java.util.Scanner;
+
 
 // Declaração da classe Main
 /*public class Main {
@@ -1441,12 +1435,12 @@ import java.util.Scanner;
 //deve obter um nome de jogador para uma pesquisa em ambos os vetores. O técnico
 //deseja saber se o nome informado é titular, reserva ou não foi convocado. Faça
 //comparação ignorando maiúsculas e minúsculas.
-public class Main {
+/*public class Main {
     public void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Scanner scanner1 = new Scanner(System.in);
-        String[] nomeTitular = new String[2];
-        String[] nomereserva = new String[3];
+        String[] nomeTitular = new String[11];
+        String[] nomereserva = new String[11];
 
         System.out.println("digite o nome dos jogadores ");
         for (int i = 0; i < nomeTitular.length; i++) {
@@ -1491,7 +1485,7 @@ public class Main {
             }
         }
     }
-}
+}*/
 //=====================================================================================================================
 //Leia para um conjunto de alunos seus nomes e suas notas finais. Armazene os valores
 //em dois vetores: uma para nomes e outro para notas. O número de alunos na turma será
@@ -1500,3 +1494,285 @@ public class Main {
 //nomes e notas dos que alcançaram rendimento igual ou acima da média. Por fim, o
 //programa deve informar o nome do aluno que obteve a menor nota da turma e o nome
 //do aluno que obteve a maior nota.
+/*public class Main{
+    public void main(String[] args){
+        Scanner scanner = new Scanner(in);
+        int qtAlunos;
+        System.out.println("digite a quantidade de aluno");
+        qtAlunos = scanner.nextInt();
+        scanner.nextLine();
+        int maiorNota = 0 ; int menorNota = 0 ; int media = 0;
+        int alunos[] = new int[qtAlunos];
+        int nota[] = new int[qtAlunos];
+        String nomeAluno[] =new String[qtAlunos];
+
+
+        for (int i = 0; i <alunos.length; i++) {
+
+            System.out.println("digite o nome do aluno " +i);
+            nomeAluno[i] = scanner.nextLine();
+            System.out.println("\ndigite a nota do aluno("+nomeAluno[i]+")");
+            nota[i] = scanner.nextInt();
+            scanner.nextLine();
+
+            if (i == 0 ) {
+                menorNota = nota[i];
+                maiorNota = nota[i];
+            } else if (menorNota > nota[i]) {
+                menorNota = nota[i];
+            }
+            if (nota[i] > maiorNota)
+                maiorNota = nota[i];
+            media += nota[i];
+        }
+        media = media / qtAlunos;
+        for (int i = 0; i < alunos.length; i++)
+        {
+            System.out.println("a nota do aluno " +nomeAluno[i]+ " é: " +nota[i]);
+        }
+
+        System.out.println("a nota media e " +media);
+        System.out.println("a menor nota digitada e " +menorNota);
+        System.out.println("a maior nota digitada foi: " +maiorNota);
+        for (int i = 0; i < alunos.length; i++)
+        {
+            if (nota[i] > media)
+            {
+                System.out.println("os alunos acima da media foram: " );
+                System.out.println("a nota " +nota[i]+ " de " +nomeAluno[i]);
+            }
+        }
+    }
+}*/
+//---------------------------------------------------------------------------------------------------------------------
+//metodo do tipo função que calcula e retorna o fatorial do parametro x.
+/*public class Main {
+    public static void main(String[]args){
+        Scanner scanner = new Scanner(System.in);
+        int n, p;
+        double combinacoes;
+        System.out.println("de o valor de n: ");
+        n = scanner.nextInt();
+        System.out.println("de o valor de p: ");
+        p = scanner.nextInt();
+        int fatN  = fat(n);
+        int fatP = fat(p);
+        int fatNP= fat(n-p);
+//        calculo de combinacions(o metodo main e o codigo chamador!)~;
+        combinacoes = fatN/(fatP*fatNP);
+        System.out.println("Cp, n= " +combinacoes);
+
+    }
+//    metodo do tipo funcao que calcula e retorna o fatorial do parametro de 'x'
+    public static  int fat(int x){
+        int fatorial = 1;
+        for (int i=2; i<=x; i++){
+            fatorial*=i; //ou fatorial * i;
+        }
+        return fatorial;
+    }
+}*/
+//====================================================================================================================
+/*public class Main {
+    public void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+//        define e preenche o vetor para a lista de convidados
+        String[] c = new String[5];
+        for (int i = 0; i < c.length; i++) {
+            System.out.println("informe o nome do convidado: ");
+            c[i] = scanner.nextLine();
+        }
+        System.out.println("\n de o nome para pesquisa: ");
+        String nome = scanner.nextLine();
+        boolean eConvidado=false;
+        for (int i = 0; i < c.length; i++) {
+            if (nome.equals(c[i])) {
+                eConvidado = true;
+                break;
+            }
+        }
+        if (eConvidado ) {
+            System.out.println(nome+" esta na lista de convidados");
+
+        }else{
+            System.out.println(nome+ "nao esta na lista de candidatos");
+        }
+    }o qu
+}*/
+//====================================================================================================================
+/*public class Main {
+    public void main(String[] args){
+        double v[] = {1, 5,7,9.8, 34.2, 12, 5, 9.8, 11, 12};
+        int p = 0; double m = v[0];
+        for (int i = 1; i < v.length; i++){
+            if (v[i] > m){
+                m = v[i];
+                p = i;
+            }
+        }
+        System.out.println("resultado " +p+ "que representa o indice do elemento");
+    }
+}*/
+//====================================================================================================================
+/*public class Main {
+    public void main (String[] args){
+//        chamada do procedimento;
+        imprimeTriangulo();
+//
+    }
+    public static void imprimeTriangulo(){
+//        laço externo se repetindo a cada linha;
+        for (int i = 1; i <= 5 ; i++) {
+//            laço interno para exibir uma linha.
+            for (int coluna = 1; coluna <= i; coluna++){ // coluna esta colocando o valor de i ++
+                System.out.println(coluna+ " ");
+            }
+//            apos escrever inclui caracters de uma novalinha:
+            System.out.println("");
+        }
+    }
+}*/
+//===============================================vetor de inteiros=====================================================
+/*public class Main {
+    public void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int alunos[] = new int[10]; int media = 0;
+        for (int i = 0; i < alunos.length; i++) {
+        System.out.println("digite a nota do aluno " +(i+1));
+        alunos[i] = scanner.nextInt();
+        System.out.println("a nota digitada foi " +alunos[i]);
+            media += alunos[i];
+            System.out.println("soma das notas " +media);
+        }
+        media = media / alunos.length;
+        System.out.println("a nota media foi " +media);
+    }
+}*/
+//-------------------------------------------------------------------------pu
+//Explicação:
+//
+//   * A função media é declarada como static double media(int v[]). Isso significa que ela retorna um valor do tipo double, para o metodo main
+//   * No método main, a função media é chamada com o array x como argumento: media(x).
+//   * A função media calcula a média dos elementos do array x e retorna o resultado.
+//   * O resultado da função media é então armazenado em uma variável no método main.
+//   * Finalmente, o valor da variável é impresso usando System.out.println.
+/*public class Main {
+    public static void main(String[] args){
+        int x[] = {10, 21, 3, 14, 35, 16, 7, 48};
+        System.out.println("meida: " +media(x));
+    }
+//    calcula a media dos elementos de v;
+    public static double media(int v[]){
+        double soma = 0;
+        for (int i = 0; i < v.length; i++) {
+            soma += v[i];
+        }
+        return  (soma/v.length);
+    }
+}*/
+//======================================================================================================================
+//Suponha que o vetor da questão anterior armazene a idade de 20 pessoas. Use o
+//método média já construído na Figura 59. O programa deve calcular e exibir quantas
+//pessoas possuem idade acima da média. Faça esse cálculo em outro método estático
+//que será chamado a partir do main. Exiba a média e a quantidade de pessoas com idade
+//acima da média ao final
+/*public class Main {
+    public static int main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        double idade[] = new double[10];
+        for (int i = 0; i < idade.length; i++) {
+        System.out.println("digita a idade da pessoa " +(1+i));
+        idade[i] = scanner.nextDouble();
+        }
+        return (idade.length);
+        }
+    }*/
+// tentativa 3
+    /*public class Main {
+        // O método main é o ponto de entrada para qualquer aplicação Java
+        public static void main(String[] args){
+            Scanner scanner = new Scanner(System.in);
+            // Declara um array para armazenar as idades
+            int idade[] = new int[10];
+            // Loop para ler as idades do usuário
+            for (int i = 0; i < idade.length; i++) {
+                System.out.println("digite um valor inteiro para idade ");
+                idade[i] = scanner.nextInt();
+            }
+            // Calcula a média das idades
+          double media = media(idade);
+            System.out.println("a nota media foi " +media);
+            // Calcula o número de idades acima da média
+            int acimaMedia = acima(idade, media);
+            System.out.println("acima da media há " +acimaMedia+ " pessoas");
+        }
+        // Método para calcular a média de um array de inteiros
+        public static double media(int v[]){ //Declaração do método "media", que calcula a média dos valores de um array de inteiros.
+            double soma = 0; //declaracao da variavel para armazenar a soma dos valores
+            // Loop para somar os elementos do array
+            for (int i = 0; i < v.length; i++) {
+                soma += v[i]; /// Adiciona o valor atual do array à variável de soma
+            }
+            System.out.println("soma das idades " +soma);
+            // Retorna a média
+            return  soma/v.length;
+        }
+        // Método para contar o número de elementos em um array que estão acima de um certo valor
+        public static int acima(int m[], double mediaAc) { // Declaração do método "acima",
+            // que conta o número de elementos em um array que estão acima de um determinado valor (neste caso, a média)
+            int count = 0; // inicializacao da variavel contadora
+            // Loop para contar os elementos que estão acima da média
+            for (int i = 0; i < m.length; i++) {
+                if (m[i] > mediaAc) {
+                   count++;
+                }
+            }
+            // Retorna a contagem
+            return count;
+        }
+    }*/
+//----------------------------------------------------------------------------------------------------------------------
+//Escreva uma classe Java executável que defina e teste um método estático do tipo
+//função que dado dois inteiros como parâmetro, calcule e retorne valor do primeiro inteiro
+//elevado ao segundo. Tente resolver a potenciação aplicando multiplicações sucessivas
+//passagem de parametro, retono de valor tags;
+/*public class Main {
+    public static void main (String[] args){
+    Scanner scanner = new Scanner(System.in);
+        System.out.println("digite o primeiro numero ");
+        double numero1 = scanner.nextDouble();
+        System.out.println("digite o segundo numero ");
+        double numero2 = scanner.nextDouble();
+        
+     double media = potenciacao(numero1, numero2);
+        System.out.println("o primeiro numero elevado ao segundo e " +media);
+
+    }
+    public static double potenciacao(double numero1, double numero2) {
+        double media = Math.pow(numero1, numero2);
+        return media;
+    }
+    }*/
+//======================================================================================================================
+//Desenvolva um método para validar o CPF passado via parâmetro. Pesquise sobre a
+//validação de CPF. O método deve retornar true se o CPF for válido ou false, caso
+//contrário. Teste invocando o método com seu CPF dentro do método main. CPF TEM 11 DIGITOS/
+public class Main {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("digite seu cpf, (somente numeros) ");
+        String cpf = scanner.nextLine();
+        cpf = cpf.replaceAll("[^0-9]", ""); // remover caracters nao numericos
+        boolean numeroValido = validarCpf(cpf);
+        if (numeroValido) {
+            System.out.println("cpf valido");
+
+        }else{
+            System.out.println("CPF INVALIDO, ELE DEVER TER 11 DIGITOS");
+        }
+    }
+    public static boolean validarCpf(String resultadocpf){
+
+        return resultadocpf.length() == 11;
+    }
+}
