@@ -507,9 +507,6 @@ public class Main {
     }
 }*/
 //==============================calculo delta======================================
-import java.time.Duration;
-import java.time.temporal.Temporal;
-import java.util.Scanner;
 
 /* public class Main{
 
@@ -1912,7 +1909,6 @@ public class Main {
 }*/
 //======================================PROGAMACAO ORIENTADA A OBJETOS POO==============================================
 
-import java.time.Duration;
 /*public class Carro {
     private String placa, cor, modelo;
     private LocalDateTime entrada, saida;
@@ -1951,7 +1947,7 @@ public long cauculaTempoViagem(){
     }
 }*/
 //------------------------------------------------------------------------------------------------------------------
-class Main {
+/*class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int fat = fatorial(6);
@@ -1965,4 +1961,4 @@ class Main {
         return  fat;
     }
 
-}
+}/*
