@@ -507,6 +507,8 @@ public class Main {
     }
 }*/
 //==============================calculo delta======================================
+import java.time.Duration;
+import java.time.temporal.Temporal;
 import java.util.Scanner;
 
 /* public class Main{
@@ -1753,26 +1755,214 @@ public class Main {
         return media;
     }
     }*/
-//======================================================================================================================
+//============================================subrotinas operador ternario==========================================================================
 //Desenvolva um método para validar o CPF passado via parâmetro. Pesquise sobre a
 //validação de CPF. O método deve retornar true se o CPF for válido ou false, caso
 //contrário. Teste invocando o método com seu CPF dentro do método main. CPF TEM 11 DIGITOS/
-public class Main {
-    public static void main(String[] args){
+/*public class Main {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("digite seu cpf, (somente numeros) ");
         String cpf = scanner.nextLine();
         cpf = cpf.replaceAll("[^0-9]", ""); // remover caracters nao numericos
         boolean numeroValido = validarCpf(cpf);
-        if (numeroValido) {
-            System.out.println("cpf valido");
-
-        }else{
-            System.out.println("CPF INVALIDO, ELE DEVER TER 11 DIGITOS");
-        }
+        System.out.println(numeroValido ? "cpf valido" : "CPF INVALIDO, ELE DEVER TER 11 DIGITOS");
     }
-    public static boolean validarCpf(String resultadocpf){
+
+    public static boolean validarCpf(String resultadocpf) {
 
         return resultadocpf.length() == 11;
     }
+}*/
+//==================================================subrotinas===================================================================
+//Faça um método estático do tipo função, chamado Aumento. O método irá receber dois
+//valores reais (X e Y) como parâmetros, calcular e retornar o aumento de X em Y%. Teste
+//o método em main no qual o valor de X representará o preço à vista de uma mercadoria
+//em uma loja de roupas e Y o percentual de acréscimo para o pagamento com cartão.
+/*public class Main {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("digite o valor da sua compra: ");
+        int valorX = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("a compra sera no credito? ");
+        String resposta = scanner.nextLine();
+        switch (resposta){
+            case "sim" :
+                valorAdcional(valorX);
+                System.out.println("o valor total e " +valorX); // note que o x ainda estara valendo o valor antes da chamado da subrotina,
+                System.out.println("o valor total e " +valorAdcional(valorX)); // para adcionar o resultado da subrotina basta fazer isso, ou fazer SOUT na propria subrotina;
+                break;
+            case  "nao" :
+                System.out.println("o valor total nao tem custo adcional " +valorX);
+        }
+    }
+    public static int valorAdcional(int valorX){
+        int total = (int) (valorX + valorX * 0.10);
+        System.out.println("total " +total);
+        return total;
+    }
+}*/
+//-------------------------------------------------------maior valor----------------------------------------------------
+//Faça um método que receba como parâmetro três números inteiros: a, b e c. O método
+//deve calcular e retornar o maior dos três. Chame esse método a partir do método main
+//da classe para testá-lo.
+/*public class Main {
+    public static void main (String[] args){
+    int[] valor = new int [3];
+        System.out.println("o maior valor digitado é " +valorAdd(valor));
+    }
+    public static int valorAdd (int valor[]) {
+        Scanner scanner = new Scanner(System.in);
+        int menorValor = 0;
+        int maiorValor = 0;
+        for (int i = 0; i < valor.length; i++) {
+            valor[i] = i + 1;
+            System.out.println("o valor atual e " + valor[i]);
+             valor[i] = scanner.nextInt();
+            if (valor[i] == 0) {
+                menorValor = valor[i];
+                maiorValor = valor[i];
+            } else if (menorValor > valor[i]) {
+                menorValor = valor[i]; // se o valor digitado for menor que o armazenado na variavel valor, menor valor sera igual a valor
+            }
+            if (valor[i] > maiorValor) {
+                maiorValor = valor[i]; // se o valor digitado for maior que o valor armazenado na variavel, variavel recebe esse valor.
+            }
+
+        }
+        return maiorValor; // retorna o valor final para o programa principal.
+    }
+}*/
+
+//   if (i == 0 ) {
+//menorNota = nota[i];
+//maiorNota = nota[i];
+//        } else if (menorNota > nota[i]) {
+//menorNota = nota[i];
+//        }
+//        if (nota[i] > maiorNota)
+//maiorNota = nota[i];
+//import java.util.Scanner;
+///===================================================================================================================
+//public class Main {
+//    public class exerciocio{
+//        public static void main (String[] args){
+//            Scanner scanner = new Scanner(System.in);
+//
+//            int x[] = {10, 21, 3, 14, 35, 16, 7 , 48};
+//            System.out.println("media " +media(x));
+//        }
+////        calcula a media dos elementos de um vetor de v;
+//        public  static double media(int v[]){
+//            double soma = 0;
+//            for (int i = 0; i < v.length; i++){
+//                soma+= v[i];
+//            }
+//            return (soma/v.length);
+//        }
+//    }
+//}
+//-----------------------------------------------------------------------------------------------------------------------
+//Faça uma classe Java executável para resolver o seguinte problema. Dados dois vetores,
+//um para as idades e outro para os respectivos salários de 27 funcionários de uma
+//empresa, o programa deve calcular e exibir a média dos salários dos funcionários com
+//mais de 40 anos. O método main deve ler os dois vetores do usuário e chamar o seguinte
+//método estático para realizar o cálculo: public static double media(double salario[], int idade[], int numeropessoas[]) {
+
+/*public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int tam;
+        System.out.println("digite a quantidade de pessoas ");
+        tam = scanner.nextInt();
+        int numeropessoas[] = new int[tam];
+        double salario[] = new double[tam];
+        int idade[] = new int[tam];
+        for (int i = 0; i < numeropessoas.length; i++) {
+            System.out.println("digite o salario da pessoa " +(i +1));
+            salario[i] = scanner.nextDouble();
+            System.out.println("digite a idade da pessoa " +(i + 1));
+            idade[i] = scanner.nextInt();
+            System.out.println("o salario da pessoa " +(i+ 1)+ " é: " +salario[i]);
+        }
+
+        double resultado = media(idade, numeropessoas, salario);
+
+        System.out.println("teste foi "+resultado);
+
+    }
+    public static double media(int[] idade, int[] numeropessoas, double[] salario) {
+        Scanner scanner = new Scanner(System.in);
+        double soma = 0;
+        double contador = 0;
+
+        for (int i = 0; i < idade.length; i++) {
+        if  (idade[i] > 40){
+            soma += salario[i];
+            contador++;
+        }
+        }
+        if (contador == 0){
+            return 0;
+        }
+        return soma/contador;
+    }
+
+}*/
+//======================================PROGAMACAO ORIENTADA A OBJETOS POO==============================================
+
+import java.time.Duration;
+/*public class Carro {
+    private String placa, cor, modelo;
+    private LocalDateTime entrada, saida;
+
+    public Carro (String placa, String cor, String modelo){
+        this.placa = placa;
+        this.cor = cor;
+        this.modelo = modelo;
+
+    }
+//    registra entraxa po:
+    public void entrar (LocalDateTime daHoraEntrada){
+        this.entrada = daHoraEntrada;
+    }
+    public void sair (LocalDateTime dataHoraSaida){
+        this.saida = dataHoraSaida;
+    }
+//retorna a placa;
+    public String getPlaca (){return  this.placa;}
+//    calcula tempo de permanencia em minutos;
+
+public long cauculaTempoViagem(){
+    LocalDateTime ate;
+    if (this.saida == null)  // se o carro nao saiu do estacionamento
+        ate = LocalDateTime.now();
+    else
+        ate = this.saida; // calcula qual a data de saida ja registrada
+        Duration periodo = Duration.between((Temporal) entrada, (Temporal) ate);
+        return  periodo.toMinutes();
+    }
+
+    private static class LocalDateTime {
+        public static LocalDateTime now() {
+            return null;
+        }
+    }
+}*/
+//------------------------------------------------------------------------------------------------------------------
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int fat = fatorial(6);
+        System.out.println("fatorial() =" +fat);
+    }
+    public static int fatorial (int n){
+        int fat = 1;
+        for (int i = 2; i <=n; i++) {
+        fat = fat * i;
+        }
+        return  fat;
+    }
+
 }
